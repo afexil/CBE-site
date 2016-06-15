@@ -1,0 +1,32 @@
+body{
+  background: #dddddd;
+}
+
+.title{
+  height: 12em;
+  min-width: 20em;
+}
+
+
+.navmenu{
+  background-color:blue;
+  height:100%;
+}
+
+.navmenu a{
+  text-decoration: none;
+}
+
+.bar-row{
+  background-color:gray;
+  height: 6em;
+}
+
+.section{
+}
+
+#tumblr-holder{
+  max-height: 70em;
+  min-height: 200px;
+  overflow: scroll;
+}
