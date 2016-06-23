@@ -12,25 +12,26 @@ body{
 }
 
 .title{
+  position: relative;
   height: 12em;
   min-width: 20em;
 }
 
 #title-offset{
-  position: absolute;
+  position: relative;
   margin-top: 2.5em;
 }
 
 .title img{
   height:5em;
-  width: 6em;
-  padding-left: 1em;
+  width: 5em;
+  margin-left: 1em;
   display: inline-block;
 }
 
 .title h1{
   font-size: 3em;
-  display: inline-block;
+  display: inline;
 }
 .navmenu{
   background-color:#909090;
@@ -55,6 +56,7 @@ body{
   height: 6em;
   border: 2px solid gray;
   border-radius: 5px;
+  width:100%;
 }
 
 .bar-row p, .bar-row h2{
