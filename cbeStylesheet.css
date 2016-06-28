@@ -77,4 +77,11 @@ body{
   overflow-y: scroll;
   border-right: 1px solid black;
   padding-left: 2em;
+  background: url("image-media/placeholderpup.png") repeat-y center top fixed;
+  background-size: cover;
+
+}
+
+#tumblr-holder p{
+  background-color: #2a9ee8;
 }
