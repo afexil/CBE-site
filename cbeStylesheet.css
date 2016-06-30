@@ -71,17 +71,35 @@ body{
   min-height: 200px;
 }
 
-#tumblr-holder{
+.body-content{
   max-height: 100vh;
   min-height: 200px;
+}
+
+.body-content img{
+  display: block;
+  height: 15%;
+  margin: 0 auto;
+}
+
+.centered-paragraph{
+  text-align: center;
+}
+
+#tumblr-holder{
   overflow-y: scroll;
   border-right: 1px solid black;
   padding-left: 2em;
-  background: url("image-media/placeholderpup.png") repeat-y center top fixed;
-  background-size: cover;
-
+  background-image: url("image-media/placeholderpup.png");
+  background-repeat: repeat;
+  background-size: 70%;
+  background-attachment: local;
 }
 
 #tumblr-holder p{
   background-color: #2a9ee8;
+}
+
+#tumblr-holder img{
+  border: 2px solid black;
 }
