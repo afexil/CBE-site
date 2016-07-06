@@ -43,7 +43,8 @@ body{
 
 .navmenu ul {
   margin-top: 1em;
-  padding-left: 20;
+  padding-left: 5px;
+  list-style: none;
 }
 
 .navmenu a{
@@ -80,6 +81,11 @@ body{
   display: block;
   height: 15%;
   margin: 0 auto;
+  margin-top: 10px;
+}
+
+.body-content p{
+  margin-top: 10px;
 }
 
 .centered-paragraph{
@@ -102,4 +108,19 @@ body{
 
 #tumblr-holder img{
   border: 2px solid black;
+  height: auto;
+  margin: auto;
+}
+
+.expandable-list .dropdown{
+  background: gray;
+}
+
+.expandable-list .dropdown-menu {
+  background:gray;
+  margin-top: 0;
+}
+
+.expandable-list .dropdown:first-of-type{
+  margin-top: 5px;
 }
