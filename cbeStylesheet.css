@@ -1,6 +1,8 @@
 body{
   background: #ceddf1;
   border-bottom: 5px solid black;
+  min-width: 840px;
+  height: 100%;
 }
 
 .fluid-container{
@@ -14,7 +16,6 @@ body{
 .title{
   position: relative;
   height: 12em;
-  min-width: 20em;
 }
 
 #title-offset{
@@ -23,18 +24,26 @@ body{
 }
 
 .title img{
-  height: 5em;
+  height: 8em;
   margin-left: 1em;
-  display: inline-block;
+  display: inline-block;;
 }
 
 .title h1{
   font-size: 3em;
   display: inline;
+  vertical-align: middle;
 }
+
+.title span{
+  vertical-align: middle;
+  display: inline;
+  height: 8em;
+}
+
 .navmenu{
   background-color:#909090;
-  height:inherit;
+  height:100%;
   border-left: 2px solid black;
   max-width: 300px;
   float:right;
@@ -50,6 +59,7 @@ body{
   text-decoration: none;
   color:#1a5276;
 }
+
 
 .bar-row{
   background-color:#759fd8;
@@ -67,18 +77,20 @@ body{
 .section{
   margin-right: 0;
   padding-right: 0;
-  height:100vh;
+  /*height:100vh;*/
+  height:100%;
   min-height: 200px;
 }
 
 .body-content{
-  max-height: 100vh;
+/*  max-height: 100vh;*/
   min-height: 200px;
+  height: 100%;
 }
 
 .body-content img{
   display: block;
-  height: 15%;
+  height: 20%;
   margin: 0 auto;
   margin-top: 10px;
 }
@@ -95,14 +107,27 @@ body{
   overflow-y: scroll;
   border-right: 1px solid black;
   padding-left: 2em;
-  background-image: url("image-media/placeholderpup.png");
+  background-image: url("image-media/shutterstock_tilable_background.png");
   background-repeat: repeat;
-  background-size: 70%;
+  background-size: 20%;
   background-attachment: local;
+  overflow: hidden;
+}
+
+#tumblr-holder:hover{
+  overflow-y: scroll;
 }
 
 #tumblr-holder p{
   background-color: #2a9ee8;
+  border: 1px solid black;
+  margin: 4px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+#tumblr-holder p p{
+  border: none;
 }
 
 #tumblr-holder img{
