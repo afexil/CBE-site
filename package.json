@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/afexil/CBE-site/issues"
   },
-  "homepage": "https://github.com/afexil/CBE-site#readme"
+  "homepage": "https://github.com/afexil/CBE-site#readme",
+  "devDependencies": {
+    "concat": "0.0.1-security",
+    "event-stream": "^3.3.4",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-serve": "^1.4.0",
+    "gulp-watch": "^4.3.10"
+  }
 }
