@@ -25,5 +25,8 @@
     "gulp-sass": "^2.3.2",
     "gulp-serve": "^1.4.0",
     "gulp-watch": "^4.3.10"
+  },
+  "dependencies": {
+    "node-sass": "^3.10.1"
   }
 }

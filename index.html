@@ -1,99 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Circuitboard Education</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Circuitboard Education</title>
 
-    <!-- Bootstrap -->
-    <link href="./bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/main.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="./bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/main.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
 
 
-  <body>
-    <div class="title">
-      <div class="fluid-container">
+<body>
+  <div id="wrapper">
+
+    <div id="page-content-wrapper">
+      <div class="section fluid-container">
         <div class="row">
-          <div class="col-xs-9">
-            <div id="title-offset">
-              <img src="../image-media/logo_tenth.png"  />
-              <span><h1>Circuitboard Education</h1></span>
+            <div class="col-xs-12" id="title">
+              <div id="title-offset">
+                <img src="/image-media/logo_tenth.png"  />
+                <h1>Circuitboard Education</h1>
+                 <a href="#menu-toggle" class="btn btn-default title-menu-toggle" id="menu-toggle">Toggle Menu</a>
+              </div>
+            </div>
+
+          <div class="col-sm-6 col-xs-12">
+            <div class="body-content" id="tumblr-holder">
+              <!--  <script type="text/javascript" src="http://circuitboard.tumblr.com/js?start=0&num=5"></script> -->
+              <div class='tumblrInjection'>
+                <div class='tumblrInjectionLine'>
+                  <a id='tumblrInjection1' href=''>
+                    <img id='tumblrInjectionPhoto1' border='0' style='margin:3px' src='' alt='' />
+                  </a>
+                  <h3 class="centered-paragraph">Check out our latest...</h3>
+                  <p id='tumblrInjectionText1'></p>
+                </div>
+              </div>
+
+
+              <script type='text/javascript' src='http://circuitboardeducators.tumblr.com/api/read/json?start=0&num=1'></script>
+
+              <script type='text/javascript'>
+              document.getElementById('tumblrInjectionPhoto1').setAttribute('src', tumblr_api_read.posts[0]['photo-url-500']);
+              document.getElementById('tumblrInjection1').setAttribute('href', tumblr_api_read.posts[0]['url-with-slug']);
+              document.getElementById('tumblrInjectionText1').innerHTML = tumblr_api_read.posts[0]['photo-caption'];
+              </script>
+
             </div>
           </div>
-          <div class="col-xs-3 navmenu">
 
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="bar-row fluid-container">
-      <div class="row">
-        <div class="col-xs-12">
-          <p>Content forthcoming</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="section fluid-container">
-        <div class="row">
-
-            <div class="col-xs-9 body-content" id="tumblr-holder">
-            <!--  <script type="text/javascript" src="http://circuitboard.tumblr.com/js?start=0&num=5"></script> -->
-            <div class='tumblrInjection'>
-  <div class='tumblrInjectionLine'><a id='tumblrInjection1' href=''><img id='tumblrInjectionPhoto1' border='0' style='margin:3px' src='' alt='' /></a><p id='tumblrInjectionText1'></p><hr><br></div>
-  <div class='tumblrInjectionLine'><a id='tumblrInjection2' href=''><img id='tumblrInjectionPhoto2' border='0' style='margin:3px' src='' alt='' /></a><p id='tumblrInjectionText2'></p><hr><br></div>
-  <div class='tumblrInjectionLine'><a id='tumblrInjection3' href=''><img id='tumblrInjectionPhoto3' border='0' style='margin:3px' src='' alt='' /></a><p id='tumblrInjectionText3'></p><hr><br></div>
-  <div class='tumblrInjectionLine'><a id='tumblrInjection4' href=''><img id='tumblrInjectionPhoto4' border='0' style='margin:3px' src='' alt='' /></a><p id='tumblrInjectionText4'></p><hr><br></div>
-  <div class='tumblrInjectionLine'><a id='tumblrInjection5' href=''><img id='tumblrInjectionPhoto5' border='0' style='margin:3px' src='' alt='' /></a><p id='tumblrInjectionText5'></p></div>
-</div>
-
-<script type='text/javascript' src='http://circuitboardeducators.tumblr.com/api/read/json?start=0&num=5'></script>
-
-<script type='text/javascript'>
-  document.getElementById('tumblrInjectionPhoto1').setAttribute('src', tumblr_api_read.posts[0]['photo-url-500']);
-  document.getElementById('tumblrInjection1').setAttribute('href', tumblr_api_read.posts[0]['url-with-slug']);
-  document.getElementById('tumblrInjectionText1').innerHTML = tumblr_api_read.posts[0]['photo-caption'];
-  document.getElementById('tumblrInjectionPhoto2').setAttribute('src', tumblr_api_read.posts[1]['photo-url-500']);
-  document.getElementById('tumblrInjection2').setAttribute('href', tumblr_api_read.posts[1]['url-with-slug']);
-  document.getElementById('tumblrInjectionText2').innerHTML = tumblr_api_read.posts[1]['photo-caption'];
-  document.getElementById('tumblrInjectionPhoto3').setAttribute('src', tumblr_api_read.posts[2]['photo-url-500']);
-  document.getElementById('tumblrInjection3').setAttribute('href', tumblr_api_read.posts[2]['url-with-slug']);
-  document.getElementById('tumblrInjectionText3').innerHTML = tumblr_api_read.posts[2]['photo-caption'];
-  document.getElementById('tumblrInjectionPhoto4').setAttribute('src', tumblr_api_read.posts[3]['photo-url-500']);
-  document.getElementById('tumblrInjection4').setAttribute('href', tumblr_api_read.posts[3]['url-with-slug']);
-  document.getElementById('tumblrInjectionText4').innerHTML = tumblr_api_read.posts[3]['photo-caption'];
-  document.getElementById('tumblrInjectionPhoto5').setAttribute('src', tumblr_api_read.posts[4]['photo-url-500']);
-  document.getElementById('tumblrInjection5').setAttribute('href', tumblr_api_read.posts[4]['url-with-slug']);
-  document.getElementById('tumblrInjectionText5').innerHTML = tumblr_api_read.posts[4]['photo-caption'];
-</script>
-            </div>
-            <div class="col-xs-3 navmenu">
+          <div class="col-sm-6 col-xs-12">
+            <div class=" body-content">
+              <h3>Why choose us</h3>
+              <p>Circuitboard Education is a newly formed consulting partnership devoted to bringing new media tools and games into a classroom environment.  We are an adaptable team that wants to help teachers and schools design and implement curricula surrounding games and digital technologies.  Our partnership consists of Lyn Lord, a lauded, high-school educator with over 20 years of classroom experience, and Felix Ackerman, a former student of Lyn’s and an analytical, new-media specialist.  Together we have experience taking projects from the spark of an idea to a smooth classroom experience.  We look forward to using our knowledge and experience to improve your classroom experience for your students! </p><br  />
+              <h4>Circuitboard Classroom Values</h4>
               <ul>
-                <a href="/"><li>Front Page</li></a>
-                <a href="/pages/projects.html"><li>Projects</li></a>
-                <a href="/pages/about.html"><li>About Us</li></a>
-                <a href="/pages/store.html"><li>Store</li></a>
+                <li>Engagement.  We expect active participation from our students.</li>
+                <li>Openness, diversity, and acceptance.  We value a diversity of viewpoints in the classroom.</li>
+                <li>Difficulty.  We present challenging material and believe we learn more from our failures than our successes.</li>
+                <li>Community.  We encourage students to help each other and to learn from each other.</li>
+                <li>Critical-Thought.  We believe whole-heartedly in the value of critical thinking over rote skills. Multi-level analysis is encouraged and rewarded.</li>
               </ul>
 
             </div>
+          </div>
 
+          <div class="col-sm-6 col-xs-12 col-sm-offset-6">
+            <div class="body-content">
+              <h3>Contact Us</h3>
+              <p>We can be reached by e-mail at <a href="mailto:cbe@circuitboardeducation.com">CBE@CircuitboardEducation.com</a></p>
+              <p> Or by phone at <a href="tel:+16032860029">603 286-0029</a></p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="./bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
-  </body>
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <a href="/"><li>Front Page</li></a>
+      <!--  <a href="/pages/projects.html"><li>Projects</li></a>
+        <a href="/pages/about.html"><li>About Us</li></a>
+        <a href="/pages/store.html"><li>Store</li></a> -->
+      </ul>
+    <a href="#side-menu-toggle" class="btn btn-default side-menu-toggle" id="side-menu-toggle">Toggle Menu</a>
+    </div>
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+  $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+  });
+  </script>
+  <script>
+  $("#side-menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+  });
+  </script>
+
+</body>
 </html>

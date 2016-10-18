@@ -8,67 +8,77 @@ div#big {
   color: none; }
 
 body {
-  background: #ceddf1;
+  background: #232724;
   border-bottom: 5px solid black;
   min-width: 840px;
-  height: 100%; }
+  min-height: 100vh; }
 
-.fluid-container {
-  height: inherit; }
+p, h1, h2, h3, h4, h5, h6, li {
+  color: #bfdfdd;
+  margin-left: 10px; }
 
-.row {
-  height: inherit; }
-
-.title {
+#title {
   position: relative;
-  height: 12em; }
+  height: 12em;
+  background: #3f4e48;
+  margin: 0;
+  margin-bottom: 3em; }
 
 #title-offset {
   position: relative;
   margin-top: 2.5em; }
 
-.title img {
+#title img {
   height: 8em;
   margin-left: 1em;
   display: inline-block; }
 
-.title h1 {
+#title h1 {
   font-size: 3em;
   display: inline;
   vertical-align: middle; }
 
-.title span {
+.title-menu-toggle {
+  position: relative;
+  float: right;
+  margin-top: 2.5em;
+  display: inline-block; }
+
+#wrapper.toggled .title-menu-toggle {
+  display: none; }
+
+.side-menu-toggle {
+  margin: 30px; }
+
+/**
+.title span{
   vertical-align: middle;
   display: inline;
-  height: 8em; }
-
-.navmenu {
-  background-color: #909090;
-  height: 100%;
+  height: 8em;
+}
+**/
+/**
+.navmenu{
+  background-color:#909090;
+  height:100%;
   border-left: 2px solid black;
   max-width: 300px;
-  float: right; }
+  float:right;
+
+}
+
 
 .navmenu ul {
   margin-top: 1em;
   padding-left: 5px;
-  list-style: none; }
+  list-style: none;
+}
 
-.navmenu a {
+.navmenu a{
   text-decoration: none;
-  color: #1a5276; }
-
-.bar-row {
-  background-color: #759fd8;
-  height: 6em;
-  border: 2px solid gray;
-  border-radius: 5px;
-  width: 100%; }
-
-.bar-row p, .bar-row h2 {
-  padding-top: 1em;
-  padding-left: 1em; }
-
+  color:#1a5276;
+}
+**/
 .section {
   margin-right: 0;
   padding-right: 0;
@@ -77,9 +87,10 @@ body {
   min-height: 200px; }
 
 .body-content {
-  /*  max-height: 100vh;*/
-  min-height: 200px;
-  height: 100%; }
+  border: 2px solid black;
+  background: #3f4e48;
+  margin: 10px;
+  padding-right: 10px; }
 
 .body-content img {
   display: block;
@@ -88,38 +99,26 @@ body {
   margin-top: 10px; }
 
 .body-content p {
-  margin-top: 10px; }
+  display: block;
+  padding-left: 2em;
+  text-indent: -2em; }
 
 .centered-paragraph {
   text-align: center; }
 
 #tumblr-holder {
-  overflow-y: scroll;
-  border-right: 1px solid black;
-  padding-left: 2em;
-  background-image: url("image-media/shutterstock_tilable_background.png");
-  background-repeat: repeat;
-  background-size: 20%;
-  background-attachment: local;
+  margin-top: 4em;
+  padding: 10px;
   overflow: hidden; }
 
 #tumblr-holder:hover {
-  overflow-y: scroll; }
-
-#tumblr-holder p {
-  background-color: #2a9ee8;
-  border: 1px solid black;
-  margin: 4px;
-  display: inline-block;
-  font-weight: bold; }
-
-#tumblr-holder p p {
-  border: none; }
+  overflow-x: scroll;
+  padding-right: 10px; }
 
 #tumblr-holder img {
   border: 2px solid black;
   height: auto;
-  margin: auto; }
+  margin-right: 10px; }
 
 .expandable-list .dropdown {
   background: gray; }
@@ -130,3 +129,62 @@ body {
 
 .expandable-list .dropdown:first-of-type {
   margin-top: 5px; }
+
+/*Sidebar toggling stuff */
+#wrapper {
+  padding-right: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  /*-o-transition: all 0.5s ease;*/
+  transition: all 0.5s ease; }
+
+#wrapper.toggled {
+  padding-right: 200px; }
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  right: 200px;
+  top: 0px;
+  width: 0;
+  height: 100%;
+  margin-right: -200px;
+  overflow-y: auto;
+  background: #000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  /*-o-transition: all 0.5s ease;*/
+  transition: all 0.5s ease; }
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 200px; }
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px; }
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-left: -200px; }
+
+/** sidebar toggling reversals for bigger screens **/
+@media (min-width: 768px) {
+  #wrapper {
+    padding-right: 200px; }
+  #wrapper.toggled {
+    padding-right: 0; }
+  #sidebar-wrapper {
+    width: 200px; }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 0; }
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative; }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-left: 0; }
+  .title-menu-toggle {
+    display: none; }
+  #wrapper.toggled .title-menu-toggle {
+    display: inline-block; } }
